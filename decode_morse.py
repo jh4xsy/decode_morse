@@ -3,8 +3,8 @@
 import argparse
 
 import numpy as np
-import scipy.io.wavfile
 from scipy import signal
+from pydub import AudioSegment
 
 from main import num_tags, prediction_to_str
 from morse import ALPHABET, SAMPLE_FREQ, get_spectrogram
@@ -14,7 +14,9 @@ if __name__ == "__main__":
     parser.add_argument("input")
     args = parser.parse_args()
 
-    rate, data = scipy.io.wavfile.read(args.input)
+    audio = AudioSegment.from_file(args.input, format="ogg")
+    data = np.array(audio.get_array_of_samples())
+    rate = audio.frame_rate
 
     # Resample and rescale
     length = len(data) / rate

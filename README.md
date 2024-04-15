@@ -6,10 +6,10 @@ The Morse code pitch frequecy range and symbols used were retrained to work with
 The results of real data [#928942](https://network.satnogs.org/observations/9284942/) are shown below.
 
 ```
-$ time python3 decode_morse.py 9284942.wav
+$ time python3 decode_morse.py 9284942.ogg 
 CHNOLOG 3TOKYO METROPOLITAN COLLEGEOFINDUSTRIALTECHNOLOGY 3 TOKYO METROPOLITNCOLLEGEOFINDUSTRIALTECHNOLOGY 3TEI M METROPOLITANCOLLEGEOFINDUSTRIAL TECHN   H 3TOKYO METROPOLITANCOLLEGEOFIN
- 
-real	0m29.410s
-user	0m30.888s
-sys	0m6.087s
+
+real	0m34.087s
+user	0m39.695s
+sys	0m7.896s
 ```
